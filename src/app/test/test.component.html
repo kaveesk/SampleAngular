@@ -1,0 +1,85 @@
+<p>
+  test works!
+</p>
+<form #stuForm="ngForm" (ngSubmit)="onSubmit(stuForm)">
+<div class="container">
+
+    <div class="form-group">
+        <label>
+          UserID:
+        </label>
+        <input type="text" #iduserID class="form-control" name="userID" [(ngModel)]="student.userID" required>
+        <input type="text" #idID name="id" [(ngModel)]="student.id" style="display: none;" >
+    </div>
+
+    <div class="form-group">
+        <label>
+            Oraganization:
+        </label>
+        <select #idOraganization class="form-control" name="idOraganization" [(ngModel)]="student.oraganization" required>
+          <option value="Florida University">Florida University</option>
+          <option value="Indiana University">Indiana University</option>
+          <option value="IMETx Hospital">IMETx Hospital</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>
+          Firstname:
+        </label>
+        <input type="text" #idfirstname class="form-control" name="firstname" [(ngModel)]="student.firstName" required>
+    </div>
+
+    <div class="form-group">
+        <label>
+          Lastname:
+        </label>
+        <input type="text" #idlastname class="form-control" name="lastname" [(ngModel)]="student.lastName" required>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Status:
+        </label>
+        <select #idstatus class="form-control" name="status" [(ngModel)]="student.status" required>
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+      <label>
+        Email:
+      </label>
+      <input type="text" #idemailAddress class="form-control" name="email" [(ngModel)]="student.email" required>
+      <!-- <span *ngIf="emailAddress.errors?.required">Email is required</span> -->
+      <!-- <p>
+        Value: {{ emailAddress.value }}
+      </p> -->
+    </div>
+
+    <div class="form-group">
+        <label>
+          Mobile:
+        </label>
+        <input type="text" #idmobile class="form-control" name="mobile" [(ngModel)]="student.mobile" required>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Role:
+        </label>
+        <select #idrole class="form-control" name="role" [(ngModel)]="student.role" required>
+          <option value="Admin">Admin</option>
+          <option value="Nurse">Nurse</option>
+          <option value="Doctor">Doctor</option>
+        </select>
+    </div>
+
+</div>
+
+  <input type="submit" class="form-control" value="Click me" />
+
+  <!-- <input type="button" value="Click me"  (click)="func()" /> -->
+
+</form>

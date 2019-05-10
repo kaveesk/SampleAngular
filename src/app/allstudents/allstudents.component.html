@@ -1,0 +1,39 @@
+<p>
+  allstudents works!
+</p>
+<div>
+    <table class="table table-striped" >  
+        <tr ngclass="btn-primary">  
+          <th class="tbl2">ID</th>
+          <th class="tbl2">UserID</th>  
+          <th class="tbl2">Oraganization</th>  
+          <th class="tbl2">First Name</th>  
+          <th class="tbl2">Last Name</th>  
+          <th class="tbl2">Status</th>  
+          <th class="tbl2">Email</th>  
+          <th class="tbl2">Mobile</th>  
+          <th class="tbl2">Role</th>
+          <th class="tbl2">Edit</th> 
+          <th class="tbl2">Delete</th>  
+        </tr>
+        <tr *ngFor="let student of allstudentdetails | async">  
+          <td class="tbl2">{{student.id}}</td>
+          <td class="tbl2">{{student.userID}}</td>  
+          <td class="tbl2">{{student.oraganization}}</td>  
+          <td class="tbl2">{{student.firstName}}</td>  
+          <td class="tbl2">{{student.lastName}}</td>  
+          <td class="tbl2">{{student.status}}</td>
+          <td class="tbl2">{{student.email}}</td>  
+          <td class="tbl2">{{student.mobile}}</td>  
+          <td class="tbl2">{{student.role}}</td>  
+          <td class="tbl2">  
+            <button type="button" class="btn btn-info" matTooltip="Click Edit Button" (click)="loadstudentToEdit(student.id)">Edit</button>      
+            <!-- <button class="btn btn-danger" (click)="loadstudentToEdit(user)" style="margin-left: 20px;"> Edit</button> -->
+          </td>  
+          <td class="tbl2">  
+            <button type="button" class="btn btn-danger" matTooltip="Click Delete Button" (click)="deletestudent(student.id)">Delete</button>  
+          </td>  
+        </tr>  
+
+      </table>
+</div>
